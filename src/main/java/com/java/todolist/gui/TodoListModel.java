@@ -42,9 +42,8 @@ public class TodoListModel extends AbstractListModel<Task> {
     }
 
     public void add(String taskMessage, PRIORITY priority) {
-        Task builtTask = new Task.Builder(taskMessage)
-                .setAddedDate(Calendar.getInstance().getTime())
-                .build();
+        Task builtTask = Task.create(taskMessage, Calendar.getInstance().getTime());
+        //Task.create(taskMessage, Calendar.getInstance().getTime());
 
         TaskDecorator newTask = null;
 

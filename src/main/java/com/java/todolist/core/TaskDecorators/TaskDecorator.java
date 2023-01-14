@@ -11,6 +11,8 @@ public abstract class TaskDecorator extends Task {
         super(task.getMessage(), task.getAddedDate());
         this.decoratedTask = task;
     }
+    
+    
 
     public abstract PRIORITY getPriority();
 }
